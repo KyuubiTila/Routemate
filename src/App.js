@@ -4,6 +4,9 @@ import { Footer } from './components/Footer';
 import { Contact } from './components/Contact';
 import { Admin } from './components/Admin';
 import { PAgeNotFound } from './components/PAgeNotFound';
+import { ContactEu } from './components/ContactEu';
+import { ContactIn } from './components/ContactIn';
+import { ContactUs } from './components/ContactUs';
 import { ProductList } from './components/ProductList';
 import { ProductDetail } from './components/ProductDetail';
 import { Route, Routes, Navigate } from 'react-router-dom';
@@ -20,8 +23,9 @@ function App() {
           <Route path="products" element={<ProductList />} />
           <Route path="products/:id" element={<ProductDetail />} />
           <Route path="contact" element={<Contact />}>
-            <Route path="contact" element={<Contact />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="in" element={<ContactIn />} />
+            <Route path="eu" element={<ContactEu />} />
+            <Route path="us" element={<ContactUs />} />
           </Route>
           <Route path="admin" element={user ? <Admin /> : <PAgeNotFound />} />
           <Route path="*" element={<PAgeNotFound />} />
