@@ -11,8 +11,11 @@ export const Header = () => {
         <NavLink to="/" className="link" end>
           Home
         </NavLink>
-        <NavLink to="/products" className="link">
+        <NavLink to="/products" className="link" end>
           Product
+        </NavLink>
+        <NavLink to="/products/1003" className="link">
+          Product Detail
         </NavLink>
         <NavLink to="/contact" className="link">
           Contact
